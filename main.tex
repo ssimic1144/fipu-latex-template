@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ left=1.25in,
+ right=1.25in,
+ top=1in,
+ }
+\usepackage[croatian,english]{babel}    %za hrvatske naslove
+\usepackage[nottoc]{tocbibind}  %za pravilan table of content
+\usepackage{graphicx}   %za dodavanje slika
+\usepackage{amsmath}    %za matematičke forumele
+\usepackage{subcaption} %za dvije slike u jednoj
+\usepackage{booktabs}   %za bolje tablice
+\usepackage{cite}
+
+\begin{document}
+
+\input{prva-i-druga-stranica/prva-stranica}
+\pagenumbering{gobble}
+\clearpage
+\newpage
+
+\input{prva-i-druga-stranica/druga-stranica}
+\pagenumbering{gobble}
+\clearpage
+\newpage
+
+%Resetirat margine
+\restoregeometry
+
+\input{sazetak}
+\pagenumbering{gobble}
+\clearpage
+\newpage
+
+\selectlanguage{croatian}
+\tableofcontents
+\pagenumbering{gobble}
+\clearpage
+\newpage
+
+\pagenumbering{arabic}
+
+\input{1-uvod}
+\newpage
+
+\input{2-poglavlje}
+\newpage
+
+\input{3-novo-poglavlje}
+\newpage
+
+\input{X-zakljucak}
+\newpage
+
+\bibliographystyle{unsrt}
+\bibliography{literatura}
+\newpage
+
+%Automatski generira listu svih slika
+\listoffigures
+\newpage
+
+%Automatski generira listu svih tablica
+\listoftables
+\newpage
+
+
+\end{document}

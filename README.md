@@ -1,1 +1,1 @@
-# unipu-latex-template
+# Thesis template for Faculty of Informatics in Pula
